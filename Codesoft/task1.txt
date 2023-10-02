@@ -1,0 +1,31 @@
+# Sample code for adding a task
+def add_task(todo_list):
+    title = input("Enter task title: ")
+    description = input("Enter task description: ")
+    due_date = input("Enter due date (optional): ")
+    task = {
+        "title": title,
+        "description": description,
+        "due_date": due_date,
+        "completed": False
+    }
+    todo_list.append(task)
+    print("Task added successfully!")
+
+# Main program loop
+while True:
+    print("To-Do List Application")
+    print("1. Add Task")
+    print("2. View Tasks")
+    print("3. Update Task")
+    print("4. Quit")
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        add_task(todo_list)
+    # Implement other menu options here
+
+    elif choice == "4":
+        break  # Exit the loop and quit the application
+    else:
+        print("Invalid choice. Please try again.")
